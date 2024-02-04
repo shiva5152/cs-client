@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: `${process.env.NEXT_PUBLIC_SERVER_ENDPOINT}/:path*`, // Proxy to Backend
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/:path*",
+  //       destination: `${process.env.NEXT_PUBLIC_SERVER_ENDPOINT}/:path*`, // Proxy to Backend
+  //     },
+  //   ];
+  // },
   images: {
     remotePatterns: [
       {
@@ -20,8 +20,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname:
-          "cyberlevels-public-assests01.s3.ap-south-1.amazonaws.com",
+        hostname: "cyberlevels-public-assests01.s3.ap-south-1.amazonaws.com",
       },
       {
         protocol: "https",
